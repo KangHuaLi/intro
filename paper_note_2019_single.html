@@ -148,6 +148,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container py-md-3">
 		<div class="row bottom-grids">
 			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> GANimation: Anatomically-aware Facial Animation from a Single Image
+
+				</h3>       
+				<p class="mb-4"> 先前已有研究來做臉部表情合成(facial expression synthesis)，最知名的例子便是StarGAN，但僅能學出離散型別的表情(因為在StarGAN中attribute是離散變量)。本篇paper提出基於Action Units(AU)的臉部表情合成方法，AU定義了人臉表情，且是分布在一個低微度且連續的manifold中，作者指出僅需使用有AU標註的影像進行非監督式訓練，即可達到更好的效果，可渲染出更多樣的表情，包括臉部肌肉的彈性度。
+
+				</p>        
+				<a href="https://arxiv.org/pdf/1807.09251.pdf">Paper</a>             
+				<a href="https://hackmd.io/uzvBHQ6HRyWcjJLI345a5g">Note</a>           
+				<a href="https://github.com/albertpumarola/GANimation">Code</a>     
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/3mEf8z8.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Identifying Analogies Across Domains
+
+				</h3>       
+				<p class="mb-4"> 雖然現在unsupervised identifying analogy的研究已經可以達到不錯的效果，但轉換圖像的visual fidelity並不足夠識別在另外一個domain中的matching sample。本篇paper提出AN-GAN，採用一種名為matching-by-synthesis的思想，把轉換的過程分成兩部：domain alignment和learning the mapping function。
+
+				</p>        
+				<a href="https://openreview.net/pdf?id=BkN_r2lR-">Paper</a>             
+				<a href="https://hackmd.io/Ao5qK-nURTK6vx-lNT1UTw">Note</a>               
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/EtlwxhI.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
 				<h3 class="my-3"> A Closer Look at Few-shot Classification
 				</h3>       
 				<p class="mb-4"> 由於不同的few-shot algorithm有不同的implementation detail，且比較的方式也不太一樣，因此很難公平的比較哪一個方法比較好。本篇paper提出：第一，公平的分析與比較得知，如果用的backbone network較深，且domain difference較少的話，不同的方法都可顯著的降低classification gap；第二，稍微對網路做一些改良，便可在mini-ImageNet和CUB兩個資料集更加提升SOTA；最後，對於cross-domain的few shot classification問題，提出一個新的實驗設定。
