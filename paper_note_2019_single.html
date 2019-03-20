@@ -148,6 +148,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container py-md-3">
 		<div class="row bottom-grids">
 			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Semantic Image Synthesis with Spatially-Adaptive Normalization
+
+				</h3>       
+				<p class="mb-4"> 本篇提出了spatially-adaptive normalization，進而結合進pix2pixHD，形成一個新的模型為GauGAN，用來解決image synthesize的問題。傳統的CNN大多使用疊起來的(conv, BN, ReLU)運算組合，但這樣的做法會把輸入的semantic information"洗掉"，因此作者提出spatially-adaptive版本的可學習轉換，來解決這個爭議。上圖是一個簡單的結果，如果先求出最左邊column的latent representation，再透過SPADE生成圖片的話，style就會有所不同。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1903.07291">Paper</a>             
+				<a href="https://hackmd.io/r-u6WR8fRO6uPK7HSC3nZQ">Note</a>           
+				<a href="">Code (TBC)</a>     
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/N2zZNei.jpg" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
 				<h3 class="my-3"> GANimation: Anatomically-aware Facial Animation from a Single Image
 
 				</h3>       
