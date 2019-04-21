@@ -148,6 +148,74 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container py-md-3">
 		<div class="row bottom-grids">
 			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Music Thumbnailing via Neural Attention Modeling of Music Emotion
+
+				</h3>       
+				<p class="mb-4"> music thumbnailing的目標是希望找到一個較短且連續的音樂片段，使得這個片段最能代表一首歌。概念是結合emotion recognition來解決music chorus selection的問題。作者引入LSTM和attention layer到CNN中，來做music emotion classification；attention layer則會對每個3秒鐘的chunk評估他的重要性，用31000首歌和相對應的emotion labels來訓練。實驗結果表明有80%的歌曲會把副歌當作是thumbnails。
+
+				</p>        
+				<a href="http://mac.citi.sinica.edu.tw/~yang/pub/huang17apsipa.pdf">Paper</a>             
+				<a href="https://hackmd.io/WHdadI_pQIiWHkBB9oFuaA">Note</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/Jr2wWRv.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Event Localization in Music Auto-tagging
+
+				</h3>       
+				<p class="mb-4"> 本篇想解決的是frame-level的music auto-tagging，即給定一個music clip，我們想知道他的attribute，包刮樂器種類、風格和其他聲學屬性。
+
+				</p>        
+				<a href="http://mac.citi.sinica.edu.tw/~yang/pub/liu16mm.pdf">Paper</a>             
+				<a href="https://hackmd.io/yTTD0RxaQgWvuHELbLj_Wg">Note</a>           
+				<a href="https://github.com/ciaua/clip2frame">Code</a>     
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/ScJ5UtV.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Hit Song Prediction for Pop Music by Siamese CNN with Ranking Loss
+
+				</h3>       
+				<p class="mb-4"> 這篇paper想要解的問題是hit song prediction。就是在一首歌被發行以前，預測他是否會很紅。傳統方法是把他看成classification(紅或不紅）或regression（紅的分數）的問題，這篇則看成是ranking的問題。作者使用了multi-objective siamese CNN，並結合了Euclidean loss和pairwise ranking loss，來學習不同歌曲之間的排名關係。根據實驗顯示，搭配上A/B sampling可以比其他baseline獲得更高的準確度！
+
+				</p>        
+				<a href="https://arxiv.org/abs/1710.10814">Paper</a>             
+				<a href="https://hackmd.io/g4eKoSD6QSWalLP2FDBx9A">Note</a>           
+				<a href="https://github.com/OckhamsRazor/HSP_CNN">Code</a>     
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/KzX9T24.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
 				<h3 class="my-3"> Transferring GANs: generating images from limited data
 
 				</h3>       
