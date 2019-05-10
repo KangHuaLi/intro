@@ -148,6 +148,141 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container py-md-3">
 		<div class="row bottom-grids">
 			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Scaling and Benchmarking Self-Supervised Visual Representation Learning
+
+				</h3>       
+				<p class="mb-4"> 在本篇paper中，作者重新審視2個有名的self-supervised learning方法(Jigsaw和Colorization)，並擴展訓練影像至1億張照片。作者時坐在不同的task上，包刮object detection、3D surface normal estimation和visual navigation，實驗證明某些任務的效能超過supervised learning！但作者也表明目前的self-supervised method並沒辦法充分學習到資料中的high level semantic representation。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1905.01235">Paper</a>             
+				<a href="https://hackmd.io/S6AZMMjsQKCBeOmrEe0pDA">Note</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/mYINJqC.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Features for Multi-Target Multi-Camera Tracking and Re-Identification
+
+				</h3>       
+				<p class="mb-4"> 這篇paper解決了兩個問題：MTMCT(multi-target multi-camera tracking)和Person Re-ID(re-identification)的問題，作者提出了創新的adaptive weighted triplet loss和hard-identity mining兩個技巧，並測試在DukeMTMC資料集中，取得了更好的Re-ID和MTMCT score！
+
+				</p>        
+				<a href="https://arxiv.org/abs/1803.10859">Paper</a>             
+				<a href="https://hackmd.io/7VwFjWRtQxSFKNmO7H-usg">Note</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/sSLinAx.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> O-GAN: Extremely Concise Approach for Auto-Encoding Generative Adversarial Networks
+
+				</h3>       
+				<p class="mb-4"> 本paper提出O-GANs(Orthogonal Generative Adversarial Networks)，透過新增加一個額外的損失項，使得discriminator變成一個很好的encoder，且這樣的設計也不會降低discriminator的自由度。本篇paper也是最簡單的方法，讓GAN擁有auto-encoding的能力！
+
+				</p>        
+				<a href="https://arxiv.org/abs/1903.01931">Paper</a>             
+				<a href="https://hackmd.io/wC1G-iMkSf2SkE-rdgw97A">Note</a>              
+				<a href="https://github.com/bojone/o-gan">Code</a>
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/QgtsYYy.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> AutoAugment: Learning Augmentation Strategies from Data
+
+				</h3>       
+				<p class="mb-4"> 目前做data argumentation的方法都是自己手動設計的。本paper提出AutoAugment，可自動搜索最適合的augmentation policies。一個augmentation policies可能包含許多sub-policies，而sub-policy包含了兩個operation，每個operation可以是旋轉、平移、扭曲等動作，在外加上機率和大小。透過作者提出了搜索演算法，挑選出能讓validation acc最高的policies來當作結果！白話一點說就是：用搜索演算法來取代手動想data augmentation的方式！
+
+				</p>        
+				<a href="https://arxiv.org/abs/1805.09501">Paper</a>             
+				<a href="https://hackmd.io/SZMmecX3QxC0eRDtXyVHfw">Note</a>              
+				<a href="https://github.com/DeepVoltaire/AutoAugment">Code</a>
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/479Vn4Q.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Billion-scale semi-supervised learning for image classification
+
+				</h3>       
+				<p class="mb-4"> 本篇paper提出一個semi-supervised learning pipeline，來解決image classification的問題。其概念是基於teacher-student paradigm。這樣的做法可以針對target architecture提升很多performance！
+
+				</p>        
+				<a href="https://arxiv.org/abs/1905.00546">Paper</a>             
+				<a href="https://hackmd.io/Ap2WPnvJRgGkRlD2say86A">Note</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/MYSTPPW.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Play as You Like: Timbre-enhanced Multi-modal Music Style Transfer
+
+				</h3>       
+				<p class="mb-4"> 本paper使用了MUNIT的架構來做music-to-music transformation。為了抓初不同樂器的音色和樂器相關演奏細節，輸入混合了4種特徵，包括MFCC、spectral difference、spectrogram和spectral envelop，並使用RaGAN。最後做在三種不同的風格樂器上，包括piano solo、guitar solo和string quartet。
+
+				</p>        
+				<a href="https://arxiv.org/pdf/1811.12214.pdf">Paper</a>             
+				<a href="https://hackmd.io/M5iRJzrbTsiQiboFXYWX0g">Note</a>              
+				<a href="https://github.com/ChienYuLu/Play-As-You-Like-Timbre-Enhanced-Multi-modal-Music-Style-Transfer">Code</a>
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/SKgUbwI.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
 				<h3 class="my-3"> Learning Features of Music from Scratch
 
 				</h3>       
