@@ -148,6 +148,695 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container py-md-3">
 		<div class="row bottom-grids">
 			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> 【隨筆】Image-to-Image Translation via Group-wise Deep Whitening-and-Coloring Transformation
+
+				</h3>       
+				<p class="mb-4"> 針對已知的I2I方法，要把資訊從examplar轉移到input image，大多使用一些normalization的技巧，譬如AdaIN(我猜是MUNIT)。廣義來說，這包刮了whitening和coloring兩個過程，然而此兩個過程計算過程很耗時，因此本paper提出一種end-to-end的方法來有效率地整合whitening和coloring到I2I中。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1812.09912">Paper</a>             
+				<a href="https://hackmd.io/vdn8UphdTsS_nmXzDFRi8w">Note</a>              
+				<a href="https://github.com/WonwoongCho/GDWCT">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/c1ShjdZ.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> 【隨筆】TraVeLGAN: Image-to-image Translation by Transformation Vector Learning
+
+				</h3>       
+				<p class="mb-4"> 本篇想解決的問題是I2I，特別的是，作者並沒有使用cycle consistency！反倒是引入了一個siamese network來限制latent space，這樣的做法可以讓I2I作用在domain gap較大的情況下，而不僅是結構類似但紋理不同的場景。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1902.09631">Paper</a>             
+				<a href="https://hackmd.io/dz8j1P1nTsq5l17cQZMYcQ">Note</a>              
+				<a href="https://github.com/KrishnaswamyLab/travelgan">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/4OZ5hcU.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Towards Instance-level Image-to-Image Translation
+
+				</h3>       
+				<p class="mb-4"> 以前做I2I方法(MUNIT or DRIT)的缺點是，操作影像的content，但僅調整至target domain的global style，也就是沒有針對物體的資訊去微調，這樣轉出來的效果不算精準。因此本篇paper提出instance-aware image-to-image translation (INIT)，變成instance-level的I2I，其優點有兩者：第一，instance-level objective loss可以幫助generator針對多樣物品做正確轉換；第二，INIT的style具備了spatial information，不再僅是global style了！
+
+				</p>        
+				<a href="https://arxiv.org/abs/1905.01744">Paper</a>             
+				<a href="https://hackmd.io/S3GldHWAQFa1IaXpZpyVFA">Note</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/1sRxeor.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> 【隨筆】CollaGAN: Collaborative GAN for Missing Image Data Imputation
+
+				</h3>       
+				<p class="mb-4"> 本篇想要解決的問題，是做missing data的資料補齊，作者提出Collaborative Generative Adversarial Network (CollaGAN)，將imputation的問題轉換成Image-to-image translation的問題來解決。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1901.09764">Paper</a>             
+				<a href="https://hackmd.io/6odj3PzuSwuxJWHlUZkmMg">Note</a>              
+				<a href="https://github.com/jongcye/CollaGAN_CVPR">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/Yi1qS5t.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> 【隨筆】mixup: Beyond Empirical Risk Minimization
+
+				</h3>       
+				<p class="mb-4"> DNN雖然強大，但她習慣去記憶訓練資料(overfitting)，且對於adversarial example過於敏感。在此研究中，作者提出mixup，在訓練時用資料對的combination來訓練，label和圖片都有採用此技巧。實驗證實mixup可以有效防止網路去記憶訓練資料的label，且對於adversarial example有更強抵抗能力。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1710.09412">Paper</a>             
+				<a href="https://hackmd.io/-nHurryyQ0Wlo2OQLSANKA">Note</a>              
+				<a href="https://github.com/facebookresearch/mixup-cifar10">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/lbWpZPK.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> U-GAT-IT: Unsupervised Generative Attentional Networks with Adaptive Layer-Instance Normalization for Image-to-Image Translation
+
+				</h3>       
+				<p class="mb-4"> 本篇paper提出一個新的unsupervised I2I方法，稱為UGATIT，概念是結合learnable normalization和attention module，和傳統的I2I不同，UGATIT可以透過新提出的AdaLIN，應付較大的structure、texture change。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1907.10830">Paper</a>             
+				<a href="https://hackmd.io/kQQT1GqHTjSEGZ0oDnVwKw">Note</a>              
+				<a href="https://github.com/taki0112/UGATIT">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/Y08EWMJ.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> 【隨筆】fast patch-based style transfer of arbitrary style
+
+				</h3>       
+				<p class="mb-4"> 作者提出style swap，為一種local matching的方法，作者額外使用80000張自然影像跟80000張畫作來訓練inverse network，實驗證明inverse network跟直接用style swap做BP出來的效果差不多！上圖是做出來的效果。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1612.04337">Paper</a>             
+				<a href="https://hackmd.io/0fW8et4jR4C1oIB2ta2miw">Note</a>              
+				<a href="https://github.com/rtqichen/style-swap">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/dibAFD6.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> 【隨筆】Arbitrary Style Transfer with Style-Attentional Networks
+
+				</h3>       
+				<p class="mb-4"> 本篇paper提出style-attentional network (SANet)來做style transfer，和其他方法相比，更能將local style patterns嵌入到content image的semantic spatial distribution之中。作者更提出identity loss和multi-level feature embedding來更加維持content structure。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1812.02342">Paper</a>             
+				<a href="https://hackmd.io/MVSfC88MRsKaqpus-CriUw">Note</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/wIjbDI0.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Learning Linear Transformations for Fast Arbitrary Style Transfer
+
+				</h3>       
+				<p class="mb-4"> 先前做任意風格轉換的演算法，通常計算複雜度都很高，而且不容易捕捉到畫風之間的變異性，也會產生一些artifact。本篇paper提出一種transformation matrix的形式來解決arbitrary style transfer的問題，這種彈性的架構在轉換的過程中也會將content給保留住。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1808.04537">Paper</a>             
+				<a href="https://hackmd.io/M5coMnlDRoiTszkvAeZ3jA">Note</a>              
+				<a href="https://github.com/sunshineatnoon/LinearStyleTransfer">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/FQPQnYR.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> 【隨筆】Photorealistic Style Transfer via Wavelet Transforms
+
+				</h3>       
+				<p class="mb-4"> 本篇paper提出WCT2，主要概念是提出一個wavelet corrected transfer，將wavelet transform自然的嵌入到NN中，並且不需要任何post-processing。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1903.09760">Paper</a>             
+				<a href="https://hackmd.io/XR_BGBsTSKWv_7VPXDuwbA">Note</a>              
+				<a href="https://github.com/clovaai/WCT2">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/CqBkcAa.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> 【隨筆】Avatar-Net: Multi-scale Zero-shot Style Transfer by Feature Decoration
+
+				</h3>       
+				<p class="mb-4"> AvatarNet的關鍵在於style decorator，透過他來對content feature和style feature做alignment。上圖是Avatar-Net做出來的效果。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1805.03857">Paper</a>             
+				<a href="https://hackmd.io/51sgpyu0SreZVKzu1nOiVw">Note</a>              
+				<a href="https://github.com/LucasSheng/avatar-net">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/8WCJ7ks.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> IntroVAE: Introspective Variational Autoencoders for Photographic Image Synthesis
+
+				</h3>       
+				<p class="mb-4"> 本篇paper提出VAE的改良，稱為自省變分編碼器 - introspective VAE (IntroVAE)，用來做高解析度image synthesizing。IntroVAE融合了VAE和GAN的思想，但卻沒有discriminator的存在！僅使用inference model (encoder)來辨別樣本的真實性，測試在CelebA上可以產生幾乎SOTA的效果！
+
+				</p>        
+				<a href="https://arxiv.org/abs/1807.06358">Paper</a>             
+				<a href="https://hackmd.io/N7JMgOsoSu2AEN2OGATriA">Note</a>              
+				<a href="https://github.com/dragen1860/IntroVAE-Pytorch">Code</a>              
+				<a href="https://github.com/SunnerLi/IntroVAE-PyTorch">My Implementation</a>
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/6xXDb54.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Wasserstein Divergence for GANs
+
+				</h3>       
+				<p class="mb-4"> 目前GAN中WGAN表現的非常不錯，理論推導也很完備，然而在實作上，去逼近k-Lipschitz連續的限制來近似Wasserstein-1 metric是非常有挑戰性的！本paper提出Wasserstein divergence (W-div)的概念，可看作是W-met的放寬限制版本，不需要k-Lipschitz連續的限制。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1712.01026">Paper</a>             
+				<a href="https://hackmd.io/IyddpCjYSc2mwXdCslaScg">Note</a>              
+				<a href="https://github.com/eriklindernoren/PyTorch-GAN/blob/master/implementations/wgan_div/wgan_div.py">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/v0qGwis.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Improving the Improved Training of Wasserstein GANs: A Consistency Term and Its Dual Effect
+
+				</h3>       
+				<p class="mb-4"> 本篇paper從WGAN出發，提出一個新方法，把Lipschitz continuity的限制綁在訓練過程中。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1803.01541">Paper</a>             
+				<a href="https://hackmd.io/IPzjmspJS9SY-3IeGmV63Q">Note</a>              
+				<a href="https://github.com/Randl/improved-improved-wgan-pytorch">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/dtoclJQ.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Variational Discriminator Bottleneck: Improving Imitation Learning, Inverse RL, and GANs by Constraining Information Flow
+
+				</h3>       
+				<p class="mb-4"> 本篇paper是想要改善GAN中discriminator會反饋沒有資訊梯度的議題，提出variational discriminator bottleneck (VDB)，概念是限制observation和discriminator internal representation之間的mutual information。可以想像成就是在discriminator internal representation中加噪聲，讓discriminator別學那麼快。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1810.00821">Paper</a>             
+				<a href="https://hackmd.io/tFc4YO8LThqdblSiJmx-6A">Note</a>              
+				<a href="https://github.com/akanimax/Variational_Discriminator_Bottleneck/">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/3XzfmcM.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Which Training Methods for GANs do actually Converge?
+
+				</h3>       
+				<p class="mb-4"> 本篇paper論述：對於GAN訓練，資料分布必須是absolute continuity，如果不是，即使是WGAN這類的模型都可能會無法收斂，沒辦法走到equilibrium point。作者近一步提出一種regularization的策略，並討論instance noise和zero-centered gradient panalties都可讓收斂發生。作者證明即使data distribution和generator分布在低維流形中，簡單的添加regularization term的作法仍能讓GAN走到local convergence！
+
+				</p>        
+				<a href="https://arxiv.org/abs/1801.04406">Paper</a>             
+				<a href="https://hackmd.io/RtZcKioBQHihziUeqTeTpQ">Note</a>              
+				<a href="https://github.com/LMescheder/GAN_stability">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/k7rhGhj.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> [隨筆] Progressive GAN
+
+				</h3>       
+				<p class="mb-4"> 在本篇paper中，作者提出progressive growing的技巧來訓練GAN，並提出一種簡單的方法，來增加generated image的變異性。此外，作者提出一些技巧，來改善G和D的不健康競爭關係。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1710.10196">Paper</a>             
+				<a href="https://hackmd.io/6mBPg1TMT4ac6VUvtHkGpw">Note</a>              
+				<a href="https://github.com/nashory/pggan-pytorch">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/47dsZYw.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> LIA: Latently Invertible Autoencoder with Adversarial Learning
+
+				</h3>       
+				<p class="mb-4"> 本篇想做的是跟PIONEER類似，在deep generative model存在著兩個問題：VAE做variational inference表現沒有很好、GAN則沒有encoding sample的能力。本paper提出Latently Invertible Autoencoder (LIA)來解決此問題，在encoder-decoder的架構向，隱藏了一個deep invertible network和inverse deep invertible network，用來把feature distribution投射到一個 𝑞 中，並近似prior。two-stage stochasticity-free training是訓練LIA的方法。實驗表明做在FFHQ上有著很好的效果！
+
+				</p>        
+				<a href="https://arxiv.org/abs/1906.08090">Paper</a>             
+				<a href="https://hackmd.io/2aVlC1yJTniqT1CIbcYsGw">Note</a>              
+				<a href="https://github.com/zhujiapeng/LIA">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/vL90kl2.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Pioneer Networks: Progressively Growing Generative Autoencoder
+
+				</h3>       
+				<p class="mb-4"> 本篇提出了一種新穎的generative autoencoder模型。GAN雖然能夠產生高品質圖像，但卻沒有reconstruction的能力；本篇融合了最近被提出了ptogressive技巧，提出了PIONEER，在訓練時完全不需要discriminator，在CelebA inference的部分取得了SOTA，可以想像成是progressive + VAE做在image generation中！
+
+				</p>        
+				<a href="https://arxiv.org/abs/1807.03026">Paper</a>             
+				<a href="https://hackmd.io/ejyRFabEQGCVgs2GGPgOzg">Note</a>              
+				<a href="https://github.com/heljakka/pioneer">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/qj5wJo9.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> [隨筆] StackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks
+
+				</h3>       
+				<p class="mb-4"> 本篇paper想解決的問題，是想要針對給定的text description，產生high-quality images。作者提出StackGAN來產生256x256的照片。整個計算過程分成兩個階段，第一個階段產生物件的primitive shape和大致的colors，第二階段則產生較photo-realistic details。另外作者還提出conditioning augmentation的技巧，來產生較為平滑的latent conditioning manifold。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1612.03242">Paper</a>             
+				<a href="https://hackmd.io/XDLQiXx1Qiuwl-A5-OqPrw">Note</a>              
+				<a href="https://github.com/hanzhanggit/StackGAN">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/u4otoHn.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> ELEGANT: Exchanging Latent Encodings with GAN for Transferring Multiple Face Attributes
+
+				</h3>       
+				<p class="mb-4"> 對於face attribute transfer的問題，目前還有三個爭議：(1) 目前都是從latent space直接產生圖像，而沒辦法從examplars產生圖像 (2) 沒辦法同時改變多個attribute (3) 產生的圖像有artifact。本篇paper提出交換latent encoding的思想，並以此提出新的架構：ELEGANT(Exchanging Latent Encoding with GAN for Transferring multiple face attributes)，在這樣的思想下，所有的attribute都可被encode，且具備disentanglement的特性。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1803.10562">Paper</a>             
+				<a href="https://hackmd.io/B8SFZ_10RBKYFD42HCeFrA">Note</a>              
+				<a href="https://github.com/Prinsphield/ELEGANT">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/mBw7i1L.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Attention-aware Multi-stroke Style Transfer
+
+				</h3>       
+				<p class="mb-4"> 以前style transfer的方法沒辦法整合content image和stylized image中的visual attention spatial distribution，或是透過不同程度的brush strokes來繪製圖像。本文則提出一種attention-aware multi-stroke style transfer來同時解決這兩個問題，將attention map中的salient characteristic給整合進來，加入不同spatial region中的multiple stroke pattern，來達到更好的渲染效果！
+
+				</p>        
+				<a href="https://arxiv.org/abs/1901.05127">Paper</a>             
+				<a href="https://hackmd.io/CnYAlsF2TOCcgvIo3wTDSQ">Note</a>              
+				<a href="https://github.com/JianqiangRen/AAMS">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/tgDYpuB.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> A Style-Aware Content Loss for Real-time HD Style Transfer
+
+				</h3>       
+				<p class="mb-4"> 針對風格轉換，以前的工作大多是用pre-trained CNN來比較風格學得好不好，譬如VGG，但這會受到ImageNet BBOX的bias的影響，因為ImageNet本身是做辨識的，不是做風格轉換的，把影像分成多個box對衡量藝術並沒有直接關係，本篇paper提出以audo-encoder為基礎的風格轉換網路，並結合GAN和style-aware content loss，使得網路可以捕捉到風格影響內容的微妙本質，譬如說鐘塔稍微有特色的扭曲，上圖最右邊的column。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1807.10201">Paper</a>             
+				<a href="https://hackmd.io/MmCxsV7HS9OsLvjRjFG2LQ">Note</a>              
+				<a href="https://github.com/CompVis/adaptive-style-transfer">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/R7Af10e.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> WarpGAN: Automatic Caricature Generation
+
+				</h3>       
+				<p class="mb-4"> 本篇論文提出WarpGAN，來對輸入的臉部影像產生caricatures（漫畫效果），同時，網路也產生一些可修改的control points，讓臉部照片可以被warp成caricature，除了可客製化如何產生face caricature外，還同時保有identity的特性，實驗結果說明WarpGAN可以產生多樣的caricatures！效果如上圖所示。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1811.10100">Paper</a>             
+				<a href="https://hackmd.io/-jfQoBtTTfqRgYPitHgdpw">Note</a>              
+				<a href="https://github.com/seasonSH/WarpGAN">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/nkUjMOa.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> WarpGAN: Automatic Caricature Generation
+
+				</h3>       
+				<p class="mb-4"> 本篇論文提出WarpGAN，來對輸入的臉部影像產生caricatures（漫畫效果），同時，網路也產生一些可修改的control points，讓臉部照片可以被warp成caricature，除了可客製化如何產生face caricature外，還同時保有identity的特性，實驗結果說明WarpGAN可以產生多樣的caricatures！效果如上圖所示。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1811.10100">Paper</a>             
+				<a href="https://hackmd.io/-jfQoBtTTfqRgYPitHgdpw">Note</a>              
+				<a href="https://github.com/seasonSH/WarpGAN">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/nkUjMOa.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Few-Shot Adversarial Learning of Realistic Neural Talking Head Models
+
+				</h3>       
+				<p class="mb-4"> 本篇paper想要解決的問題是neural talking head model，白話來說就是產生一個說話的人頭video，但特別的地方在於可以針對few-shot或one-shot來作客製化，這樣一來收斂速度會很快！
+
+				</p>        
+				<a href="https://arxiv.org/abs/1905.08233">Paper</a>             
+				<a href="https://hackmd.io/sKuG1xW9SUeU6mvzaPhMsA">Note</a>              
+				<a href="https://github.com/grey-eye/talking-heads">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/jvk7hty.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Deep Flow-Guided Video Inpainting
+
+				</h3>       
+				<p class="mb-4"> 本篇想解決的是domain adaptation的問題。以前大部分的方法是想要學習domain invariant representation。本篇的思路也是類似，但使用了duplex adversarial discriminator (DupGAN)。整體網路包含了三個部分：encoder, generator和兩個discriminators。Generator在生成影像時會conditon on一個domain code，來生成不同domain的影像。在這樣的框架下，不僅可以學到domain invariant特性，還可以保留category information
+
+				</p>        
+				<a href="https://arxiv.org/abs/1905.02884">Paper</a>             
+				<a href="https://hackmd.io/I1iWYy6gTfOzI_VrtsNWfQ">Note</a>              
+				<a href="https://github.com/nbei/Deep-Flow-Guided-Video-Inpainting">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/ZXHV8En.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Duplex Generative Adversarial Network for Unsupervised Domain Adaptation Lanqing
+
+				</h3>       
+				<p class="mb-4"> 本篇想解決的是domain adaptation的問題。以前大部分的方法是想要學習domain invariant representation。本篇的思路也是類似，但使用了duplex adversarial discriminator (DupGAN)。整體網路包含了三個部分：encoder, generator和兩個discriminators。Generator在生成影像時會conditon on一個domain code，來生成不同domain的影像。在這樣的框架下，不僅可以學到domain invariant特性，還可以保留category information
+
+				</p>        
+				<a href="http://openaccess.thecvf.com/content_cvpr_2018/html/Hu_Duplex_Generative_Adversarial_CVPR_2018_paper.html">Paper</a>             
+				<a href="https://hackmd.io/HUaT8crbRpOtyRvWm4NCIw">Note</a>              
+				<a href="http://vipl.ict.ac.cn/view_database.php?id=6">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/PmSlzbe.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> MoCoGAN: Decomposing Motion and Content for Video Generation
+
+				</h3>       
+				<p class="mb-4"> 本篇paper提出MoCoGAN來解決video generation。基本思路是，一張影像可以被拆解成content和motion的組合，content代表畫面中的物體，motion代表物體移動性。MoCoGAN會把一系列的random vector投射成一系列的圖片。當content固定時，motion則可看成是一個隨機過程，實驗證明MoCoGAN的確可以產生固定content不同motion的影片！上圖是示意圖。
+
+				</p>        
+				<a href="https://arxiv.org/abs/1707.04993">Paper</a>             
+				<a href="https://hackmd.io/50-9-rtzTRO4jDNfHX9G7A">Note</a>              
+				<a href="https://github.com/sergeytulyakov/mocogan">Code</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/RTPjz2v.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
+				<h3 class="my-3"> Features for Multi-Target Multi-Camera Tracking and Re-Identification
+
+				</h3>       
+				<p class="mb-4"> 這篇paper解決了兩個問題：MTMCT(multi-target multi-camera tracking)和Person Re-ID(re-identification)的問題，作者提出了創新的adaptive weighted triplet loss和hard-identity mining兩個技巧，並測試在DukeMTMC資料集中，取得了更好的Re-ID和MTMCT score！
+
+				</p>        
+				<a href="https://arxiv.org/abs/1803.10859">Paper</a>             
+				<a href="https://hackmd.io/7VwFjWRtQxSFKNmO7H-usg">Note</a>              
+			</div>
+			<div class="col-lg7 offset-sm-1 px-lg-1">
+					<br></br>
+					<br></br>
+				<img src="https://i.imgur.com/sSLinAx.png" height=350 width=350 alt="" class="img-fluid"/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-us py-5">
+	<div class="container py-md-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-7 col-md-1 px-sm-0">
 				<h3 class="my-3"> Scaling and Benchmarking Self-Supervised Visual Representation Learning
 
 				</h3>       
